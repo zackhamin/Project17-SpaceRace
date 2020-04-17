@@ -14,6 +14,8 @@
 		57AD8B842449B40900CF10EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AD8B822449B40900CF10EE /* Main.storyboard */; };
 		57AD8B862449B40C00CF10EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AD8B852449B40C00CF10EE /* Assets.xcassets */; };
 		57AD8B892449B40C00CF10EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AD8B872449B40C00CF10EE /* LaunchScreen.storyboard */; };
+		57AD8B922449B59E00CF10EE /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57AD8B902449B59E00CF10EE /* explosion.sks */; };
+		57AD8B932449B59E00CF10EE /* starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 57AD8B912449B59E00CF10EE /* starfield.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		57AD8B852449B40C00CF10EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57AD8B882449B40C00CF10EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57AD8B8A2449B40C00CF10EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57AD8B902449B59E00CF10EE /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
+		57AD8B912449B59E00CF10EE /* starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starfield.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				57AD8B852449B40C00CF10EE /* Assets.xcassets */,
 				57AD8B872449B40C00CF10EE /* LaunchScreen.storyboard */,
 				57AD8B8A2449B40C00CF10EE /* Info.plist */,
+				57AD8B902449B59E00CF10EE /* explosion.sks */,
+				57AD8B912449B59E00CF10EE /* starfield.sks */,
 			);
 			path = "Project17-SpaceRace";
 			sourceTree = "<group>";
@@ -131,6 +137,8 @@
 				57AD8B842449B40900CF10EE /* Main.storyboard in Resources */,
 				57AD8B7B2449B40900CF10EE /* GameScene.sks in Resources */,
 				57AD8B862449B40C00CF10EE /* Assets.xcassets in Resources */,
+				57AD8B922449B59E00CF10EE /* explosion.sks in Resources */,
+				57AD8B932449B59E00CF10EE /* starfield.sks in Resources */,
 				57AD8B892449B40C00CF10EE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
