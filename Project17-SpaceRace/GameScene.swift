@@ -25,14 +25,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameTimer: Timer?
     
     var levelTimerLabel = SKLabelNode(fontNamed: "ArialMT")
-
+    
     //Immediately after leveTimerValue variable is set, update label's text
     var levelTimerValue: Int = 3 {
         didSet {
             levelTimerLabel.text = "Time left: \(levelTimerValue)"
         }
     }
-    
     
     
     var score = 0 {
@@ -50,18 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(starfield)
         starfield.zPosition = -1
         
-        //        player = SKSpriteNode(imageNamed: "player")
-        //        player.position = CGPoint(x: 100, y: 384)
-        //        player.physicsBody = SKPhysicsBody(texture: player.texture!, size: player.size)
-        //        player.physicsBody?.contactTestBitMask = 1
-        //        addChild(player)
         createPlayer()
-        
-//        levelTimerLabel.fontColor = SKColor.white
-//        levelTimerLabel.fontSize = 40
-//        levelTimerLabel.position = CGPoint(x: size.width/2, y: size.height/2 + 350)
-//        levelTimerLabel.text = "Time left: \(levelTimerValue)"
-//        addChild(levelTimerLabel)
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.position = CGPoint(x: 16, y: 16)
@@ -74,6 +62,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.contactDelegate = self
         
         gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+    }
+    
+    func gameTimeStart() {
+        levelTimerLabel.fontColor = SKColor.white
+        levelTimerLabel.fontSize = 100
+        levelTimerLabel.position = CGPoint(x: 600, y: 350)
+        levelTimerLabel.text = "Time left: \(levelTimerValue)"
+        addChild(levelTimerLabel)
     }
     
     func createPlayer(){
@@ -148,14 +144,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func newGame() {
-        isGameOver = false
-        gameView.gameScene()
-        score = 0
-        scoreUpdate()
-        createPlayer()
-        
+        gameTimeStart()
+        if levelTimerValue == 3 {
+            print(levelTimerValue,"------")
+            levelTimerValue -= 1
+            print(levelTimerValue,"-----")
+        } else {
+            isGameOver = false
+            gameView.gameScene()
+            score = 0
+            scoreUpdate()
+            createPlayer()
+        }
     }
-    
+        
     func gameOver() {
         
         if  isGameOver{
@@ -171,9 +173,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /*
      
-        things to do:
-            1. Timer for game reset
-            2. Debris cleared after game ends
+     things to do:
+     1. Timer for game reset
+     2. Debris cleared after game ends
      
      */
 }
+
